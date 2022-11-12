@@ -1,0 +1,1 @@
+python scripts/search/RMINAS.py --cfg configs/search/RMINAS/rminas_darts_cifar10.yaml OUT_DIR exp/search/rminas_darts_cifar10

@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES="0" PYTHONPATH='.' python scripts/PE-NAS/reproduce_other/zero_cost.py --cfg configs/PE/zc_oneshot_nasbenchmacro_cifar10.yaml OUT_DIR ./exp/re-zc-macro LOADER.NUM_WORKERS 8 SEARCH.method_type l2_norm

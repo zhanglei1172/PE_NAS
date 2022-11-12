@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES="0" PYTHONPATH='.' python scripts/PE-NAS/PE_NAS_C/pe_nas_c.py --cfg configs/PE/zc_oneshot_nasbenchmacro_cifar10.yaml OUT_DIR ./exp/PE-NAS-C-macro LOADER.NUM_WORKERS 16

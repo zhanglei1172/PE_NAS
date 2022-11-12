@@ -1,0 +1,46 @@
+SPACE:
+  NAME: 'nasbench201'
+  CHANNELS: 16
+  LAYERS: 5 # erery stage have 5 layers
+  NODES: 4
+# BENCHMARK:
+
+LOADER:
+  DATASET: 'cifar10'
+  DATAPATH: 'data'
+  SPLIT: [0.7, 0.3]
+  BATCH_SIZE: 32
+  NUM_CLASSES: 10
+SEARCH:
+  IM_SIZE: 32
+  batch_size: 64
+  data_size: 25000
+  cutout: False
+  cutout_length: 16
+  cutout_prob: 1.0
+  train_portion: 0.7
+  AUTO_RESUME: False
+  method_type: partial_training
+OPTIM:
+  MAX_EPOCH: 10
+  LR_POLICY: 'cos'
+DARTS:
+  UNROLLED: False
+  ALPHA_LR: 3.e-4
+  ALPHA_WEIGHT_DECAY: 1.e-3
+TRAIN:
+  AUX_WEIGHT: 0
+  LAYERS: 8
+  CHANNELS: 32
+experiment_type: data
+test_arch_num: 100
+train_size_single: 0
+train_size_list: [0]
+fidelity_single: 5
+fidelity_list: [1, 2, 3, 5, 7, 9, 13, 19, 26, 37, 52, 73]
+max_hpo_time: 0
+uniform_random: 1
+OUT_DIR: 'exp/0zero_cost'
+RNG_SEED: 1000
+all_arch: 0
+train_ratio: 0.1
